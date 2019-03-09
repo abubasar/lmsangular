@@ -1,0 +1,35 @@
+<form>
+<input type="text" name="keyword" [(ngModel)]="searchRequest.keyword" (keypress)="search()" placeholder="Search By keyword"><br>
+<input type="text" name="name" [(ngModel)]="searchRequest.name" (keypress)="search()" placeholder="Search By Name"><br>
+<input type="text" name="phone" [(ngModel)]="searchRequest.phone" (keypress)="search()" placeholder="Search By Phone Number"><br>
+<!--<button (click)="search()">Search</button>-->
+</form>
+
+<div class="container">
+  <div class="row col-md-6 offset-md-2">
+    <table class="table table-striprd">
+      <thead>
+        <a href="/student-entry" class="btn btn-info btn-xs float-right"><b>+</b>Add New Student</a>
+        <tr>
+          <th (click)="sort('name')">Name</th>
+          <th (click)="sort('phone')">Phone</th>
+          <th (click)="sort('email')">Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let s of models">
+          <td>{{s.name}}</td>
+          <td>{{s.phone}}</td>
+          <td>{{s.email}}</td>
+          <td><a href="" class="btn btn-info xs">Edit</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+<button (show)="searchRequest.page>1" (click)="previous()">Previous</button>
+<label>Current Page:{{searchRequest.page}}</label>
+<button (click)="next()">Next</button>

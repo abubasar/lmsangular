@@ -1,0 +1,33 @@
+<form>
+  <input type="text" name="keyword" [(ngModel)]="searchRequest.keyword" (keypress)="search()" placeholder="Search By keyword"><br>
+
+  </form>
+  
+  <div class="container">
+    <div class="row col-md-6 offset-md-2">
+      <table class="table table-striprd">
+        <thead>
+          <a href="/course-entry" class="btn btn-info btn-xs float-right"><b>+</b>Add New Course</a>
+          <tr>
+            <th (click)="sort('title')">Title</th>
+            <th (click)="sort('price')">Price</th>
+            <th (click)="sort('tags')">Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let s of models">
+            <td>{{s.title}}</td>
+            <td>{{s.price}}</td>
+            <td>{{s.tags}}</td>
+            <td><a href="" class="btn btn-info xs">Edit</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  
+  
+  <button (show)="searchRequest.page>1" (click)="previous()">Previous</button>
+  <label>Current Page:{{searchRequest.page}}</label>
+  <button (click)="next()">Next</button>
