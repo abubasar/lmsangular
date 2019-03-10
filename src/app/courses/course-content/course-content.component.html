@@ -1,14 +1,33 @@
-
-  <div class="container">
-      
-              <div class="row">
-                  
-                  <li class="col-md-9" *ngFor="let content of contents">
-                      <p class="course-sprint-title">{{content.title}}</p>
-                      <iframe width="560" height="315" src="{{content.url}}" frameborder="0" allowfullscreen></iframe>
-                  </li>
-              </div>
-        
-      </div>
-  
-  
+<section class="content content-course-details">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-8">
+                        <ol class="breadcrumb pln mtl">
+                            <li>
+                                <a href="#">Courses</a>
+                            </li>
+                            <li class="bold">{{courseTitle}}</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="list-unstyled mvl menu-secondary-course-details">
+                            <li *ngFor="let c of contents" [ngClass]="{active : courseTitle === c.title}">
+                                <a (click)="url">{{c.title}}</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div ng-show="vm.activeContent.title != ''" class="col-md-9">
+                        <p class="course-sprint-title">{{courseTitle}}</p>
+                        <iframe width="560" height="315" [src]="url" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="l-block pvm phs" href="#"></a>
+</section>

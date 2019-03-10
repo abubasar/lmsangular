@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseComponent } from 'lmsangular/src/app/base/base.component';
 import { EnrollmentService } from 'src/app/enrollment.service';
 import { StudentService } from 'src/app/student.service';
 import { CourseService } from 'src/app/course.service';
 import { Entity } from 'src/app/entity';
 import { BaseRequestModel } from 'src/app/base-request-model';
 import { Enrollment } from 'src/app/enrollment';
+import { BaseComponent } from 'src/app/base/base.component';
 
 @Component({
   selector: 'app-enrollment-entry',

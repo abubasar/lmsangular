@@ -1,4 +1,5 @@
-import { Entity } from 'lmsangular/src/app/entity';
+import { Entity } from './entity';
+
 
 export class Enrollment extends Entity {
 }

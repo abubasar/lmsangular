@@ -3,7 +3,8 @@ import { BaseService } from './base.service';
 import { HttpClient } from '@angular/common/http';
 import { UrlService } from './url.service';
 import { Observable } from 'rxjs';
-import { Entity } from 'lmsangular/src/app/entity';
+import { Entity } from './entity';
+
 
 @Injectable({
   providedIn: 'root'

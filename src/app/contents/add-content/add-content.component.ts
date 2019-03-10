@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { BaseComponent } from 'lmsangular/src/app/base/base.component';
 import { Entity } from 'src/app/entity';
 import { ContentService } from 'src/app/content.service';
 import { BaseRequestModel } from 'src/app/base-request-model';
 import { CourseService } from 'src/app/course.service';
+import { BaseComponent } from 'src/app/base/base.component';
 
 @Component({
   selector: 'app-add-content',
