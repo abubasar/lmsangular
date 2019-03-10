@@ -1,3 +1,4 @@
+<!--
 <form>
   <input type="text" name="keyword" [(ngModel)]="searchRequest.keyword" (keypress)="search()" placeholder="Search By keyword"><br>
 
@@ -31,3 +32,46 @@
   <button (show)="searchRequest.page>1" (click)="previous()">Previous</button>
   <label>Current Page:{{searchRequest.page}}</label>
   <button (click)="next()">Next</button>
+
+-->
+  <section class="section section-courses pal">
+    <div class="container">
+        <h1 class="mbl">Courses</h1>
+        <div class="row">
+            <div class="col-md-6 col-lg-6"  *ngFor="let c of models">
+                <div class="card">
+                    <div class="card-header pam">
+                        <h3>{{c.title}}</h3>
+                        <p>
+                            {{c.courseShortDescription}}
+                        </p>
+                        <p>
+                            <b>Subtitle:</b> {{c.subTitle}}
+                        </p>
+                        <p>
+                            <b>Fees:</b> {{c.price}} TK<br>
+                        </p>
+                        <p>
+                            <b>Duration:</b> {{c.totalSeconds}} hours
+                        </p>
+                        <p class="text-right mtl section-btn">
+                            <a href="/course-detail" class="btn btn-primary">Details</a>
+
+                            <a href="/enrollment-entry" class="btn btn-primary">Enrol Now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Each course includes:</h2>
+                <ul class="list-unstyled list-common-benefits pal">
+                    <li><i class="fa fa-search"></i>Personal review on your assignments</li>
+                    <li><i class="fa fa-support"></i>Support from mentor and teaching assistants</li>
+                    <li><i class="fa fa-certificate"></i> Certification on successul completion</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,70 @@
+
+    
+<div class="section section-signup mvl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h3 class="card-title">Add New Content</h3>
+                    </div>
+                    <div class="card-body">
+                        <form>
+
+                          <div class="form-group">
+                            <label for="courseId">Select Course:</label>
+                            <select id="courseId" name="courseId" [(ngModel)]="model.courseId" class="form-control">
+                             <option *ngFor="let course of courses" value="{{course.id}}">{{course.title}}</option>
+                             </select>
+                          </div>
+                            <div class="form-group">
+                                <label for="serial">Serial Number</label>
+                                <input type="text" class="form-control" name="serial" id="serial" placeholder="Serial Number" [(ngModel)]="model.serial">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="title">Title</label>
+                                <input type="text" class="form-control" name="title" id="title" placeholder="Title" [(ngModel)]="model.title">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description">Description</label>
+                                <textarea class="form-control" rows="5" id="description" name="description" [(ngModel)]="model.description"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="url">Content Url</label>
+                                <input type="text" class="form-control" name="url" id="url" placeholder="Content Url" [(ngModel)]="model.url">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contentDuration">Content Duraiton</label>
+                                <input type="text" name="totalSeconds" class="form-control" id="totalSeconds" placeholder="Content Duration" [(ngModel)]="model.totalSeconds">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tags">Tags</label>
+                                <input type="text" class="form-control" name="tags" id="tags" placeholder="Tags" [(ngModel)]="model.tags">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="category">Category</label>
+                                <input type="text" class="form-control" name="category" id="category" placeholder="Video" [(ngModel)]="model.category">
+                            </div>
+
+                            <div class="row text-right">
+                                <div class="col-lg-12">
+                                    <button type="submit" class="btn btn-success" (click)="save()">Add Content</button>
+                                    <a class="btn btn-primary" href="/all-course">Back to Courses</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

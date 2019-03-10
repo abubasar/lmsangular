@@ -17,6 +17,11 @@ import { NavComponent } from './nav/nav.component';
 import { CourseListComponent } from './courses/course-list/course-list.component';
 import { AddCourseComponent } from './courses/add-course/add-course.component';
 import { CourseService } from './course.service';
+import { EnrollmentEntryComponent } from './enrollments/enrollment-entry/enrollment-entry.component';
+import { AddContentComponent } from './contents/add-content/add-content.component';
+import { EnrollmentService } from './enrollment.service';
+import { ContentService } from './content.service';
+import { CourseContentComponent } from './courses/course-content/course-content.component';
 
 
 @NgModule({
@@ -28,7 +33,10 @@ import { CourseService } from './course.service';
     TeacherEntryComponent,
     NavComponent,
     CourseListComponent,
-    AddCourseComponent
+    AddCourseComponent,
+    EnrollmentEntryComponent,
+    AddContentComponent,
+    CourseContentComponent
   ],
 
   imports: [
@@ -42,7 +50,9 @@ import { CourseService } from './course.service';
     UrlService,
     StudentService,
     TeacherService,
-    CourseService
+    CourseService,
+    EnrollmentService,
+    ContentService
   ],
   bootstrap: [AppComponent]
 })
